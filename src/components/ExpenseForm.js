@@ -27,7 +27,7 @@ export default class ExpenseForm extends React.Component {
     onAmountChange = (e) => {
         const amount = e.target.value;
         if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {
-            this.setState(() => ({ amount }));    
+            this.setState(() => ({ amount }));
         }
     }
     onDateChange = (createdAt) => {
@@ -57,14 +57,14 @@ export default class ExpenseForm extends React.Component {
             <div>
                 {this.state.error && <p>{this.state.error}</p>}
                 <form onSubmit={this.onSubmit}>
-                    <input 
+                    <input
                         type="text"
                         placeholder="Description"
                         autoFocus
                         value={this.state.description}
                         onChange={this.onDescriptionChange}
                     />
-                    <input 
+                    <input
                         type="text"
                         placeholder="Amount"
                         value={this.state.amount}
